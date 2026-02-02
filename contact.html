@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abu Khaled Contact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f5dd70",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#2c1f18",
+                        "background-secondary": "#5d5048",
+                        "accent-sand": "#9f896f",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2c1f18;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5d5048;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f896f;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#181711] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f4f0] dark:border-[#5d5048] px-6 lg:px-10 py-4 bg-white dark:bg-[#2c1f18] z-20 sticky top-0">
+<div class="flex items-center gap-4 cursor-pointer" onclick="window.location.href='index.html'">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+</div>
+<h2 class="text-[#181711] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Abu Khaled</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="menu.html" data-i18n="nav_menu">Menu</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html#story" data-i18n="nav_story">Our Story</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="reservation.html" data-i18n="nav_reservations">Reservations</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="#" data-i18n="nav_contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#181711] dark:text-white transition-colors" title="Toggle Theme">
+        <span class="material-symbols-outlined theme-icon">dark_mode</span>
+    </button>
+    <button id="lang-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#181711] dark:text-white font-bold transition-colors text-sm" title="Switch Language">
+        عربي
+    </button>
+</div>
+<button onclick="window.location.href='reservation.html'" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-[#181711] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-md">
+<span class="truncate" data-i18n="book_now">Book Now</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden text-[#181711] dark:text-white">
+<span id="open-menu-btn" class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-[#2c1f18] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 shadow-xl text-white">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-xl font-bold text-black dark:text-white">Abu Khaled</h2>
+        <span id="close-menu-btn" class="material-symbols-outlined text-3xl cursor-pointer text-black dark:text-white">close</span>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-bold text-center">
+        <a href="index.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700" data-i18n="nav_home">Home</a>
+        <a href="menu.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700" data-i18n="nav_menu">Menu</a>
+        <a href="index.html#story" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700" data-i18n="nav_story">Our Story</a>
+        <a href="reservation.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700" data-i18n="nav_reservations">Reservations</a>
+        <a href="#" class="text-primary hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700" data-i18n="nav_contact">Contact</a>
+    </nav>
+</div>
+
+<!-- Main Content Layout -->
+<main class="flex-grow flex flex-col lg:flex-row h-full">
+<!-- Left Side: Contact Form -->
+<div class="w-full lg:w-1/2 xl:w-[45%] flex flex-col justify-center px-6 py-10 lg:p-16 bg-white dark:bg-[#2c1f18] relative z-10">
+<div class="max-w-lg mx-auto w-full">
+<!-- Headline -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span class="text-xs font-bold uppercase tracking-widest" data-i18n="nav_contact">Contact Us</span>
+</div>
+<h1 class="text-[#181711] dark:text-white tracking-tight text-3xl lg:text-4xl font-bold leading-tight mb-3" data-i18n="get_in_touch">Get in Touch</h1>
+<p class="text-gray-600 dark:text-[#9f896f] text-base font-normal leading-relaxed" data-i18n="contact_desc">
+                            Have a question or feedback? We'd love to hear from you. Fill out the form below or visit us at our location.
+                        </p>
+</div>
+<!-- Form -->
+<form id="contact-form" class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you soon.'); this.reset();">
+<div class="space-y-4 pt-2">
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="full_name">Full Name</span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="Enter your full name" type="text"/>
+</label>
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="email_address">Email Address</span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="email@example.com" type="email"/>
+</label>
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="phone_number">Phone Number</span>
+<input class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="+20 123 456 7890" type="tel"/>
+</label>
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="message">Message</span>
+<textarea required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-32 p-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm resize-none placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="How can we help you?"></textarea>
+</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary text-[#181711] text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-primary/25 mt-2">
+<span data-i18n="submit_message">Send Message</span>
+                        </button>
+</form>
+</div>
+</div>
+<!-- Right Side: Contact Info & Visuals -->
+<div class="hidden lg:block lg:w-1/2 xl:w-[55%] relative overflow-hidden bg-[#221f10]">
+<!-- Background pattern overlay -->
+<div class="absolute inset-0 bg-[#2c1f18]/40 z-10 pointer-events-none"></div>
+<!-- Main Image -->
+<div class="absolute inset-0 h-full w-full">
+<div class="h-full w-full bg-cover bg-center object-cover opacity-60" data-alt="Traditional Egyptian grill setup" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjdxH_H03sRVXThZH6nYYEvecibpQeHyou3fsYLLjPLOxUTA8wHNKLKwfbWFFiu_aJkZ0bO0LDolDMdvTPJq1aiuNOw3cnUyJObxYrvH04RbmQMFQxc9YuG_HGZ7kqdwy8RSZJuSRVV1jXrBJi5nWI3_NLqwyBUj3kER0bRjfDdoii_KVPFaKNTA0BeH3PGW4kW3EYfaSAGCVJcYmTBqxzih9QlEZljZoyLT2mmAEny2LnbgTkAr0rDRo_p3fdY5v_H0Z0-lUEBkU');">
+</div>
+<!-- Gradient overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#2c1f18] via-transparent to-[#2c1f18]/50"></div>
+</div>
+<!-- Floating Info Card -->
+<div class="absolute bottom-16 start-16 end-16 z-20">
+<div class="backdrop-blur-md bg-[#2c1f18]/90 border border-[#5d5048] p-8 rounded-xl shadow-2xl">
+<div class="flex items-start justify-between mb-6">
+<div>
+<h3 class="text-white text-xl font-bold mb-2" data-i18n="visit_title">Visit Abu Khaled</h3>
+<p class="text-[#9f896f] text-sm" data-i18n="visit_subtitle">Authentic charcoal grilled flavors.</p>
+</div>
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6 text-sm">
+    <div class="flex flex-col gap-1">
+        <span class="text-[#9f896f] font-bold uppercase text-xs tracking-wider" data-i18n="address_label">Address</span>
+        <span class="text-white"><span data-i18n="address_line1">123 Nile Avenue</span>,<br><span data-i18n="address_line2">Downtown, Cairo</span></span>
+    </div>
+    <div class="flex flex-col gap-1">
+        <span class="text-[#9f896f] font-bold uppercase text-xs tracking-wider" data-i18n="contact_label">Contact</span>
+        <span class="text-white">(555) 123-4567<br>hello@abukhaled.com</span>
+    </div>
+    <div class="flex flex-col gap-1 col-span-2">
+        <span class="text-[#9f896f] font-bold uppercase text-xs tracking-wider" data-i18n="footer_hours">Opening Hours</span>
+        <div class="flex justify-between w-full max-w-xs text-white">
+            <span data-i18n="daily">Daily</span>
+            <span>11:00 AM - 11:00 PM</span>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Visual -->
+<div class="lg:hidden h-48 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Warm restaurant ambience" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAwmZ8IR_NyCYrEbRkkUJ8S41ua1V6stiR2_VHA83DsAQFp5By6fpvDz0ndRx45vo22jiJACGQkpjAVdQu22Pv4mRVpcKThjnoosT3OQnZD2HTJxh9zNTNRODUF5wvJ6bRh5qZJstSamVYTFl_E7SnV6hRyfQqKCsa93ZMcn13BrnHr4eGvhitpaAFH91kXlcCUw5BolJUNgXd9090fru_xmXk-783q_PokAEtj18cJZ7whcE3XCpigjhPrcm1OQ0cpqbXN0wXixE');">
+</div>
+<div class="absolute inset-0 bg-[#2c1f18]/70 flex items-center justify-center text-center p-6">
+<div>
+<h3 class="text-white text-lg font-bold">Abu Khaled</h3>
+<p class="text-[#9f896f] text-sm mt-1">123 Nile Corniche, Cairo</p>
+</div>
+</div>
+</div>
+</div>
+<script src="assets/js/main.js"></script>
+</body></html>

@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Authentic Egyptian Menu - Nile Grill</title>
+<title>Authentic Egyptian Menu - Abu Khaled</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
@@ -64,18 +64,27 @@
 <div class="size-8 text-primary-dark">
 <span class="material-symbols-outlined !text-[32px]">kebab_dining</span>
 </div>
-<h2 class="text-accent text-xl font-bold leading-tight tracking-[-0.015em]">Nile Grill</h2>
+<h2 class="text-accent text-xl font-bold leading-tight tracking-[-0.015em]">Abu Khaled</h2>
 </div>
 <!-- Desktop Nav -->
 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
 <nav class="flex items-center gap-9">
-<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="index.html">Home</a>
-<a class="text-accent text-sm font-bold border-b-2 border-primary" href="menu.html">Menu</a>
-<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="index.html#story">Our Story</a>
-<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="reservation.html">Contact</a>
+<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="index.html" data-i18n="nav_home">Home</a>
+<a class="text-accent text-sm font-bold border-b-2 border-primary" href="menu.html" data-i18n="nav_menu">Menu</a>
+<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="index.html#story" data-i18n="nav_story">Our Story</a>
+<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="reservation.html" data-i18n="nav_reservations">Reservations</a>
+<a class="text-accent text-sm font-medium hover:text-primary-dark transition-colors" href="contact.html" data-i18n="nav_contact">Contact</a>
 </nav>
+<div class="flex items-center gap-2">
+    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-accent dark:text-white transition-colors" title="Toggle Theme">
+        <span class="material-symbols-outlined theme-icon">dark_mode</span>
+    </button>
+    <button id="lang-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-accent dark:text-white font-bold transition-colors text-sm" title="Switch Language">
+        عربي
+    </button>
+</div>
 <button onclick="alert('Order Online feature coming soon!')" class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-primary hover:bg-primary-dark transition-colors text-accent text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Order Online</span>
+<span class="truncate" data-i18n="order_online">Order Online</span>
 </button>
 </div>
 <!-- Mobile Menu Icon (Placeholder) -->
@@ -88,14 +97,15 @@
 <!-- Mobile Menu Drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-background-dark transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 shadow-xl">
     <div class="flex justify-between items-center mb-8">
-        <h2 class="text-xl font-bold">Nile Grill</h2>
+        <h2 class="text-xl font-bold">Abu Khaled</h2>
         <span id="close-menu-btn" class="material-symbols-outlined text-3xl cursor-pointer text-accent">close</span>
     </div>
     <nav class="flex flex-col gap-6 text-xl font-bold text-center">
-        <a href="index.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100">Home</a>
-        <a href="menu.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100">Menu</a>
-        <a href="index.html#story" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100">Our Story</a>
-        <a href="reservation.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100">Contact/Reserve</a>
+        <a href="index.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100" data-i18n="nav_home">Home</a>
+        <a href="menu.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100" data-i18n="nav_menu">Menu</a>
+        <a href="index.html#story" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100" data-i18n="nav_story">Our Story</a>
+        <a href="reservation.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100" data-i18n="nav_reservations">Reservations</a>
+        <a href="contact.html" class="text-accent hover:text-primary-dark py-2 border-b border-gray-100" data-i18n="nav_contact">Contact</a>
     </nav>
 </div>
 
@@ -107,26 +117,26 @@
 <div class="flex-1 min-h-[300px] w-full md:w-auto h-full rounded-xl overflow-hidden relative group">
 <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10"></div>
 <img alt="Delicious Egyptian mixed grill platter with kofta and kebabs on a wooden table" class="w-full h-full object-cover min-h-[320px] transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz_TWPHGhWe_zbCsvMoO_0U5PGSzcGjL8OInUyMGqCrEeY3-uhOo0-vGkM1fctOfJWitjtKGtJrkCVrKPmCMgSomuhHaPNj6Sq4E-G8yxblo6MVjaVulbQ7CAVM1zK1wiG-Yv2c9W-FBGy_6xJ23iVFQVOeqQkaBYRQByy3MN6kRz0dSNiAHr5iUApS-w8KAu99VYr8adGmQqVIFkileHt6dRu4LpAKEU_dNZBrMihqJsW99kSoxJQ8BxyKTnszC81e_O8Idc7W1M"/>
-<div class="absolute bottom-6 left-6 z-20">
-<span class="bg-primary text-accent text-xs font-bold px-2 py-1 rounded mb-2 inline-block">Featured</span>
+<div class="absolute bottom-6 start-6 z-20">
+<span class="bg-primary text-accent text-xs font-bold px-2 py-1 rounded mb-2 inline-block" data-i18n="featured">Featured</span>
 <p class="text-white font-medium">Chef's Special Mixed Grill</p>
 </div>
 </div>
-<div class="flex-1 flex flex-col gap-6 text-center md:text-left py-4 md:pr-8">
+<div class="flex-1 flex flex-col gap-6 text-center md:text-start py-4 md:pe-8">
 <div class="flex flex-col gap-3">
-<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight" data-i18n="hero_title">
                             Authentic Flavors of the Nile
                         </h1>
-<h2 class="text-gray-300 text-base md:text-lg font-normal leading-relaxed max-w-xl">
+<h2 class="text-gray-300 text-base md:text-lg font-normal leading-relaxed max-w-xl" data-i18n="hero_subtitle">
                             Experience the timeless taste of Cairo with our traditional charcoal-grilled meats, aromatic tagines, and handmade desserts.
                         </h2>
 </div>
 <div class="flex gap-4 justify-center md:justify-start">
 <button onclick="document.getElementById('grill').scrollIntoView({behavior: 'smooth'})" class="flex cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-primary hover:bg-primary-dark transition-colors text-accent text-base font-bold shadow-lg shadow-primary/20">
-                            View Menu
+                            <span data-i18n="view_menu">View Menu</span>
                         </button>
 <button onclick="window.location.href='reservation.html'" class="flex cursor-pointer items-center justify-center rounded-full h-12 px-8 bg-white/10 hover:bg-white/20 transition-colors text-white text-base font-medium backdrop-blur-md">
-                            Book a Table
+                            <span data-i18n="book_table">Book a Table</span>
                         </button>
 </div>
 </div>
@@ -140,29 +150,29 @@
 <div class="sticky top-24 rounded-2xl border border-secondary/20 bg-white p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)]">
 <div class="flex flex-col gap-6">
 <div class="flex flex-col border-b border-secondary/20 pb-4">
-<h3 class="text-accent text-lg font-bold">Menu Sections</h3>
-<p class="text-secondary text-sm">Jump to category</p>
+<h3 class="text-accent text-lg font-bold" data-i18n="menu_sections">Menu Sections</h3>
+<p class="text-secondary text-sm" data-i18n="jump_to_category">Jump to category</p>
 </div>
 <nav class="flex flex-col gap-2">
 <a class="group flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 hover:bg-primary/20 transition-colors border border-transparent hover:border-primary/30" href="#grill">
 <span class="material-symbols-outlined text-accent group-hover:scale-110 transition-transform">skillet</span>
-<span class="text-accent text-sm font-bold">From the Grill</span>
+<span class="text-accent text-sm font-bold" data-i18n="from_grill">From the Grill</span>
 </a>
 <a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-background-light transition-colors border border-transparent hover:border-secondary/20" href="#sides">
 <span class="material-symbols-outlined text-secondary group-hover:text-accent transition-colors">rice_bowl</span>
-<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors">Traditional Sides</span>
+<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors" data-i18n="traditional_sides">Traditional Sides</span>
 </a>
 <a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-background-light transition-colors border border-transparent hover:border-secondary/20" href="#tagines">
 <span class="material-symbols-outlined text-secondary group-hover:text-accent transition-colors">soup_kitchen</span>
-<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors">Mahshi &amp; Tagines</span>
+<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors" data-i18n="mahshi_tagines">Mahshi &amp; Tagines</span>
 </a>
 <a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-background-light transition-colors border border-transparent hover:border-secondary/20" href="#desserts">
 <span class="material-symbols-outlined text-secondary group-hover:text-accent transition-colors">bakery_dining</span>
-<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors">Desserts</span>
+<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors" data-i18n="desserts">Desserts</span>
 </a>
 <a class="group flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-background-light transition-colors border border-transparent hover:border-secondary/20" href="#beverages">
 <span class="material-symbols-outlined text-secondary group-hover:text-accent transition-colors">local_cafe</span>
-<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors">Beverages</span>
+<span class="text-secondary group-hover:text-accent font-medium text-sm transition-colors" data-i18n="beverages">Beverages</span>
 </a>
 </nav>
 <div class="mt-4 p-4 bg-accent/5 rounded-xl border border-accent/10">
@@ -179,17 +189,17 @@
 <section class="scroll-mt-28" id="grill">
 <div class="flex items-center gap-3 mb-6 border-b-2 border-primary/30 pb-2">
 <span class="material-symbols-outlined text-primary-dark text-3xl">skillet</span>
-<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight">From the Grill</h2>
+<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight" data-i18n="from_grill">From the Grill</h2>
 </div>
 <div class="grid gap-4">
 <!-- Item 1 -->
 <div class="flex flex-col sm:flex-row gap-4 bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div class="flex flex-1 flex-col justify-center gap-1">
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Mixed Grill Platter</h3>
-<span class="text-accent font-bold text-lg">$28.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="mixed_grill">Mixed Grill Platter</h3>
+<span class="text-accent font-bold text-lg">L.E. 28.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed pr-4">A generous selection of Shish Tawook, Kofta, and Lamb Chops served with grilled vegetables and tahini.</p>
+<p class="text-secondary text-sm leading-relaxed pe-4" data-i18n="mixed_grill_desc">A generous selection of Shish Tawook, Kofta, and Lamb Chops served with grilled vegetables and tahini.</p>
 </div>
 <div class="shrink-0 flex items-center mt-3 sm:mt-0">
 <button class="add-to-order-btn flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -201,10 +211,10 @@
 <div class="flex flex-col sm:flex-row gap-4 bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div class="flex flex-1 flex-col justify-center gap-1">
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Shish Tawook</h3>
-<span class="text-accent font-bold text-lg">$22.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="shish_tawook">Shish Tawook</h3>
+<span class="text-accent font-bold text-lg">L.E. 22.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed pr-4">Marinated chicken skewers grilled to perfection, seasoned with garlic, yogurt, and Egyptian spices.</p>
+<p class="text-secondary text-sm leading-relaxed pe-4" data-i18n="shish_tawook_desc">Marinated chicken skewers grilled to perfection, seasoned with garlic, yogurt, and Egyptian spices.</p>
 </div>
 <div class="shrink-0 flex items-center mt-3 sm:mt-0">
 <button class="add-to-order-btn flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -216,10 +226,10 @@
 <div class="flex flex-col sm:flex-row gap-4 bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div class="flex flex-1 flex-col justify-center gap-1">
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Kofta Kebab</h3>
-<span class="text-accent font-bold text-lg">$20.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="kofta_kebab">Kofta Kebab</h3>
+<span class="text-accent font-bold text-lg">L.E. 20.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed pr-4">Minced beef and lamb spiced with parsley, onions, and our secret spice blend, grilled on skewers.</p>
+<p class="text-secondary text-sm leading-relaxed pe-4" data-i18n="kofta_kebab_desc">Minced beef and lamb spiced with parsley, onions, and our secret spice blend, grilled on skewers.</p>
 </div>
 <div class="shrink-0 flex items-center mt-3 sm:mt-0">
 <button class="add-to-order-btn flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -233,17 +243,17 @@
 <section class="scroll-mt-28" id="sides">
 <div class="flex items-center gap-3 mb-6 border-b-2 border-primary/30 pb-2">
 <span class="material-symbols-outlined text-primary-dark text-3xl">rice_bowl</span>
-<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight">Traditional Sides</h2>
+<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight" data-i18n="traditional_sides">Traditional Sides</h2>
 </div>
 <div class="grid md:grid-cols-2 gap-4">
 <!-- Item 1 -->
 <div class="bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start w-full mb-2">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Mombar</h3>
-<span class="text-accent font-bold">$12.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="mombar">Mombar</h3>
+<span class="text-accent font-bold">L.E. 12.00</span>
 </div>
-<p class="text-secondary text-sm mb-4">Rice-stuffed beef sausage casing, boiled with herbs and fried golden brown.</p>
+<p class="text-secondary text-sm mb-4" data-i18n="mombar_desc">Rice-stuffed beef sausage casing, boiled with herbs and fried golden brown.</p>
 </div>
 <button class="add-to-order-btn w-full mt-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
                             Add
@@ -253,10 +263,10 @@
 <div class="bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start w-full mb-2">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Hawawshi</h3>
-<span class="text-accent font-bold">$14.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="hawawshi">Hawawshi</h3>
+<span class="text-accent font-bold">L.E. 14.00</span>
 </div>
-<p class="text-secondary text-sm mb-4">Crispy baladi bread stuffed with spiced minced meat, onions, and peppers.</p>
+<p class="text-secondary text-sm mb-4" data-i18n="hawawshi_desc">Crispy baladi bread stuffed with spiced minced meat, onions, and peppers.</p>
 </div>
 <button class="add-to-order-btn w-full mt-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
                             Add
@@ -266,10 +276,10 @@
 <div class="bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group flex flex-col justify-between">
 <div>
 <div class="flex justify-between items-start w-full mb-2">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Egyptian Rice</h3>
-<span class="text-accent font-bold">$6.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="egyptian_rice">Egyptian Rice</h3>
+<span class="text-accent font-bold">L.E. 6.00</span>
 </div>
-<p class="text-secondary text-sm mb-4">Classic white rice cooked with vermicelli noodles and butter.</p>
+<p class="text-secondary text-sm mb-4" data-i18n="rice_desc">Classic white rice cooked with vermicelli noodles and butter.</p>
 </div>
 <button class="add-to-order-btn w-full mt-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
                             Add
@@ -281,7 +291,7 @@
 <section class="scroll-mt-28" id="tagines">
 <div class="flex items-center gap-3 mb-6 border-b-2 border-primary/30 pb-2">
 <span class="material-symbols-outlined text-primary-dark text-3xl">soup_kitchen</span>
-<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight">Mahshi &amp; Tagines</h2>
+<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight" data-i18n="mahshi_tagines">Mahshi &amp; Tagines</h2>
 </div>
 <div class="grid gap-4">
 <!-- Item 1 -->
@@ -293,10 +303,10 @@
 <div class="flex flex-1 flex-col justify-between">
 <div>
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Bamya (Okra) Tagine</h3>
-<span class="text-accent font-bold text-lg">$18.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="bamya">Bamya (Okra) Tagine</h3>
+<span class="text-accent font-bold text-lg">L.E. 18.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed mt-1">Tender okra cooked in a rich tomato sauce with garlic, coriander, and chunks of beef, slow-cooked in a clay pot.</p>
+<p class="text-secondary text-sm leading-relaxed mt-1" data-i18n="bamya_desc">Tender okra cooked in a rich tomato sauce with garlic, coriander, and chunks of beef, slow-cooked in a clay pot.</p>
 </div>
 <div class="mt-4 flex justify-end">
 <button class="add-to-order-btn flex w-full md:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-6 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -313,10 +323,10 @@
 <div class="flex flex-1 flex-col justify-between">
 <div>
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Wara' Enab (Vine Leaves)</h3>
-<span class="text-accent font-bold text-lg">$15.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="wara_enab">Wara' Enab (Vine Leaves)</h3>
+<span class="text-accent font-bold text-lg">L.E. 15.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed mt-1">Grape leaves rolled and stuffed with a savory mix of rice, herbs, and spices, simmered in lemon broth.</p>
+<p class="text-secondary text-sm leading-relaxed mt-1" data-i18n="wara_enab_desc">Grape leaves rolled and stuffed with a savory mix of rice, herbs, and spices, simmered in lemon broth.</p>
 </div>
 <div class="mt-4 flex justify-end">
 <button class="add-to-order-btn flex w-full md:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-6 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -331,17 +341,17 @@
 <section class="scroll-mt-28 mb-12" id="desserts">
 <div class="flex items-center gap-3 mb-6 border-b-2 border-primary/30 pb-2">
 <span class="material-symbols-outlined text-primary-dark text-3xl">bakery_dining</span>
-<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight">Desserts</h2>
+<h2 class="text-accent text-2xl md:text-3xl font-bold tracking-tight" data-i18n="desserts">Desserts</h2>
 </div>
 <div class="grid gap-4">
 <!-- Item 1 -->
 <div class="flex flex-col sm:flex-row gap-4 bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div class="flex flex-1 flex-col justify-center gap-1">
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Om Ali</h3>
-<span class="text-accent font-bold text-lg">$9.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="om_ali">Om Ali</h3>
+<span class="text-accent font-bold text-lg">L.E. 9.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed pr-4">Egypt's national dessert. Flaky puff pastry soaked in hot milk, cream, and nuts, baked until golden.</p>
+<p class="text-secondary text-sm leading-relaxed pe-4" data-i18n="om_ali_desc">Egypt's national dessert. Flaky puff pastry soaked in hot milk, cream, and nuts, baked until golden.</p>
 </div>
 <div class="shrink-0 flex items-center mt-3 sm:mt-0">
 <button class="add-to-order-btn flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -353,10 +363,10 @@
 <div class="flex flex-col sm:flex-row gap-4 bg-white p-5 rounded-xl border border-secondary/10 shadow-sm hover:shadow-md transition-shadow group">
 <div class="flex flex-1 flex-col justify-center gap-1">
 <div class="flex justify-between items-baseline w-full">
-<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors">Basbousa</h3>
-<span class="text-accent font-bold text-lg">$7.00</span>
+<h3 class="text-accent text-lg font-bold group-hover:text-primary-dark transition-colors" data-i18n="basbousa">Basbousa</h3>
+<span class="text-accent font-bold text-lg">L.E. 7.00</span>
 </div>
-<p class="text-secondary text-sm leading-relaxed pr-4">Sweet semolina cake soaked in simple syrup, topped with almonds.</p>
+<p class="text-secondary text-sm leading-relaxed pe-4" data-i18n="basbousa_desc">Sweet semolina cake soaked in simple syrup, topped with almonds.</p>
 </div>
 <div class="shrink-0 flex items-center mt-3 sm:mt-0">
 <button class="add-to-order-btn flex w-full sm:w-auto cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-background-light hover:bg-primary hover:text-accent border border-secondary/20 hover:border-primary transition-all text-accent text-sm font-bold">
@@ -373,15 +383,15 @@
 <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-2xl">kebab_dining</span>
-<span class="text-white font-bold text-xl">Nile Grill</span>
+<span class="text-white font-bold text-xl">Abu Khaled</span>
 </div>
 <div class="flex gap-6 text-sm font-medium">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-primary transition-colors" href="reservation.html">Contact</a>
+<a class="hover:text-primary transition-colors" href="#" data-i18n="privacy_policy">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#" data-i18n="terms_of_service">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="contact.html" data-i18n="nav_contact">Contact</a>
 </div>
 <div class="text-sm opacity-60">
-                © 2023 Nile Grill. All rights reserved.
+                © 2023 Abu Khaled. <span data-i18n="rights_reserved">All rights reserved.</span>
             </div>
 </div>
 </footer>
