@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Egyptian BBQ - Authentic Charcoal Flavor</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f5dd70",
+                        "accent-brown": "#5d5048",
+                        "deep-brown": "#2c1f18",
+                        "warm-beige": "#9f896f",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#221f10",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"]
+                    },
+                    backgroundImage: {
+                        'mashrabiya': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H22v-2h-2v2H22v2h-2v2H22v2h-2v2H22v2h-2v2H22v2h-2v2H22v-2h-2v2h-2V22h-2v18h-2V22h-2v18h-2V22h-2v18h-2V22H8v18H6V22H4v18H2V22H0v2h20v2H0v2h20v2H0v2h20v2H0v2h20v2H0v-2h20v-2H0v-2h20v-2H0v-2h20z' fill='%239f896f' fill-opacity='0.07' fill-rule='evenodd'/%3E%3C/svg%3E\")"
+                    }
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-deep-brown dark:text-white transition-colors duration-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e5e0] bg-white/95 backdrop-blur-md px-4 py-3 lg:px-10 dark:bg-background-dark/95 dark:border-white/10">
+<div class="flex items-center gap-3 text-deep-brown dark:text-white">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">kebab_dining</span>
+</div>
+<h2 class="text-deep-brown dark:text-white text-xl font-bold leading-tight tracking-tight">Egyptian BBQ</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-accent-brown dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="text-accent-brown dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#story">Our Story</a>
+<a class="text-accent-brown dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="reservation.html">Reservations</a>
+<a class="text-accent-brown dark:text-gray-300 text-sm font-medium hover:text-primary transition-colors" href="#">Locations</a>
+</nav>
+<button onclick="window.location.href='reservation.html'" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-yellow-400 text-deep-brown text-sm font-bold leading-normal tracking-wide transition-colors">
+<span class="truncate">Book a Table</span>
+</button>
+</div>
+<div class="lg:hidden">
+<span id="open-menu-btn" class="material-symbols-outlined text-deep-brown dark:text-white cursor-pointer">menu</span>
+</div>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-background-dark transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col p-6 shadow-xl">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-xl font-bold">Menu</h2>
+        <span id="close-menu-btn" class="material-symbols-outlined text-3xl cursor-pointer text-deep-brown dark:text-white">close</span>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-bold text-center">
+        <a href="menu.html" class="text-deep-brown dark:text-white hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800">Menu</a>
+        <a href="#story" class="text-deep-brown dark:text-white hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800" onclick="document.getElementById('mobile-menu').classList.add('translate-x-full')">Our Story</a>
+        <a href="reservation.html" class="text-deep-brown dark:text-white hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800">Reservations</a>
+        <a href="#" class="text-deep-brown dark:text-white hover:text-primary py-2 border-b border-gray-100 dark:border-gray-800">Locations</a>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<div class="@container">
+<div class="relative flex min-h-[600px] flex-col items-center justify-center p-4 text-center overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Close up of sizzling kabab and kofta skewers on a charcoal grill with smoke" style='background-image: linear-gradient(rgba(44, 31, 24, 0.4), rgba(44, 31, 24, 0.7)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8GH1LX8w41FRn7Xtxwct9ug3BdUfrhwEDlUA9T0yb9YWnsZ2IrKKLW-Q22aFzwAm6ZhOMEHMqDLFJNUV0arOJ3EFW6H_RV4j_ynHgF915wjRCkK7anMeyubdyUXViqvxf9drgnJeqgiosvJVVRubi5kc3M_QZgFmqql2gT_b6EgMcY6F5u11c0E671dYLmDH4LfAr9WuGxrqpgdyaW9P0rw8zKxxjUUBN-x5Lp6Mzsn6NAvbiVXB15rfuOB5_0ZlvZqSK6iHXskw");'>
+</div>
+<div class="relative z-10 flex flex-col gap-6 max-w-4xl px-4 animate-fade-in-up">
+<div class="flex flex-col gap-2">
+<span class="text-primary font-bold tracking-widest uppercase text-sm">Est. 1985 Cairo</span>
+<h1 class="text-white text-5xl font-black leading-tight tracking-tight md:text-7xl drop-shadow-lg">
+                            Authentic Charcoal Flavor
+                        </h1>
+<h2 class="text-gray-200 text-lg md:text-xl font-normal leading-relaxed max-w-2xl mx-auto mt-2">
+                            Experience the taste of Cairo in every bite. Traditional Egyptian Kabab &amp; Kofta grilled to perfection over open charcoal fire.
+                        </h2>
+</div>
+<div class="flex flex-wrap gap-4 justify-center mt-4">
+<button onclick="window.location.href='menu.html'" class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-yellow-400 text-deep-brown text-base font-bold transition-all transform hover:scale-105">
+<span>View Menu</span>
+<span class="material-symbols-outlined ml-2 text-sm">restaurant_menu</span>
+</button>
+<button onclick="window.location.href='reservation.html'" class="flex items-center justify-center rounded-lg h-12 px-8 bg-white/90 hover:bg-white text-deep-brown text-base font-bold backdrop-blur-sm transition-all">
+<span>Book a Table</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Signature Dishes Section -->
+<section class="py-16 px-4 md:px-10 lg:px-40 bg-mashrabiya bg-background-light dark:bg-background-dark">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-2">From the Grill</h2>
+<h3 class="text-deep-brown dark:text-white text-3xl md:text-4xl font-bold">Signature Dishes</h3>
+</div>
+<a class="text-accent-brown dark:text-gray-300 font-medium flex items-center gap-1 hover:text-primary transition-colors" href="menu.html">
+                        View Full Menu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group flex flex-col bg-white dark:bg-[#2a261c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 dark:border-white/5">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Platter of grilled mixed meats including shish tawook and lamb chops with rice" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAdhb7-NjvisqeYNv2TcY3e2apgFVpARGnWswLS6Vdr3xO2UllZh0dZj91gWlF-krxl_CSfclC_FNG9SLMRNgqqb9mY9lYR9HjIciCi_mAPUhD4--4ZsbVxHJP4FID8JLZQ8cE4YJsWRbu5IX4GZs1uBKrpaasizMv_N8XGvarcFmVDr9H5dPaYae6KDiahzY2czEF982uFkAte8Kkjs_5ibQ4fqOgm7YGK6pwDujERTvv4hd0JuslYfUgxjLai5UeOqGQwkunUZb0");'>
+</div>
+<div class="absolute top-4 right-4 bg-white dark:bg-deep-brown p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-deep-brown dark:text-white text-xl font-bold">Mixed Grill Platter</h4>
+<span class="text-primary font-bold text-lg">$28</span>
+</div>
+<p class="text-accent-brown dark:text-gray-400 text-sm mb-6 flex-1">A hearty selection of shish tawook, kofta, and lamb chops served with saffron rice and tahini.</p>
+<button class="add-to-order-btn w-full py-3 rounded-lg bg-background-light dark:bg-white/5 text-deep-brown dark:text-white font-bold text-sm hover:bg-primary hover:text-deep-brown transition-colors">
+                                Order Now
+                            </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col bg-white dark:bg-[#2a261c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 dark:border-white/5">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Freshly baked hawawshi pita stuffed with spiced minced meat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFBm5rofPRE1aKijApn2HLUL7WBgNu1LEWC8aGsN8Rvma15_inc23KVz8X-SMoUH4JOyFi2d23LXbZlSPjB1tS_81IjsptncJyUeFAURtp0HUxCqQ5y_RgRPGNqI1rcVkFl06kip73re1kHiRZWBUbofqBFLvoDimIKwb-T2xOmAicSe8sr0jOMf7OZSgHvbe0aWUf_89laoHxEbzaaq76uK0JY6DEjk0Evi2-g2PyaepGzo2YJbmThKEjHBf-Sp3tOymxuSJM-SY");'>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-deep-brown dark:text-white text-xl font-bold">Traditional Hawawshi</h4>
+<span class="text-primary font-bold text-lg">$16</span>
+</div>
+<p class="text-accent-brown dark:text-gray-400 text-sm mb-6 flex-1">Oven-baked baladi bread stuffed with minced meat, onions, peppers, and our secret spice blend.</p>
+<button class="add-to-order-btn w-full py-3 rounded-lg bg-background-light dark:bg-white/5 text-deep-brown dark:text-white font-bold text-sm hover:bg-primary hover:text-deep-brown transition-colors">
+                                Order Now
+                            </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col bg-white dark:bg-[#2a261c] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-gray-100 dark:border-white/5">
+<div class="h-64 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Bowl of Koshary with lentils rice pasta and crispy onions" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgJfu5UxTVS4AwXOKUCV-DvJ5aUr5m5YzhpamPBKmxY_kj9hM8QahlVhXkkfStUCarhAhZOxD4OT3bHqnOsass8b0N7lnVEHfJ3OkQcnAKRAfiIhjqIkljnv-Y4Tz2EzkezuCh-msdPjCTPlcq2jV6m1FvIhPADwuB2IFJ4wosx7Y9zPxHt6KkFPHMQFZinbfXrwHT-BlR88rTFoPQm_UHcIoZAhNlp1cCyc3IzyGVQyuFXZ8g_X6gqr8JvoWyM_ZHLA1TqVAGHlM");'>
+</div>
+<div class="absolute top-4 right-4 bg-white dark:bg-deep-brown p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-green-600 text-xl">eco</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h4 class="text-deep-brown dark:text-white text-xl font-bold">Royal Koshary</h4>
+<span class="text-primary font-bold text-lg">$14</span>
+</div>
+<p class="text-accent-brown dark:text-gray-400 text-sm mb-6 flex-1">Egypt's national dish. A mix of rice, lentils, and pasta topped with spicy tomato sauce and garlic vinegar.</p>
+<button class="add-to-order-btn w-full py-3 rounded-lg bg-background-light dark:bg-white/5 text-deep-brown dark:text-white font-bold text-sm hover:bg-primary hover:text-deep-brown transition-colors">
+                                Order Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section id="story" class="py-20 px-4 md:px-10 lg:px-40 bg-white dark:bg-[#1a170e]">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 lg:order-1">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary z-0"></div>
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Chef grilling meat on traditional charcoal grill with smoke and spices" class="w-full h-auto object-cover aspect-[4/5]" data-alt="Chef grilling meat on traditional charcoal grill with smoke and spices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNzl7ieqrEKwf6CBeQfqOsK_-VqhlsvXr8QKIH78hLyARrKJKTCGU6QcM2eDTxvA0JD4BSkatdHoKq1Fur9Ka5IjZelYGqBnxuKJ1Z_qRk6ixlU9vZLowrlt-8aLEhYu3uC7ensX3s-pRMO-WCCIovH379fUc3dkh62bzv363hOz6dXXZ255OrZA27H6YHWbbh13zecTuKzy1UGCNSluSLZUV_zF2opSAud6ig5udrotr_kvpLmX45TK9BKlekGn3YQYkf3ObQwv4"/>
+</div>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-mashrabiya bg-warm-beige rounded-full z-0 opacity-50"></div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="flex items-center gap-2 mb-4">
+<div class="h-0.5 w-12 bg-primary"></div>
+<span class="text-accent-brown dark:text-primary font-bold uppercase tracking-widest text-sm">Our Story</span>
+</div>
+<h2 class="text-4xl lg:text-5xl font-display font-black text-deep-brown dark:text-white mb-6 leading-tight">
+                        Generations of <br/><span class="text-primary italic">Grilling Mastery</span>
+</h2>
+<p class="text-accent-brown dark:text-gray-300 text-lg leading-relaxed mb-6">
+                        Founded on family recipes passed down through three generations, Egyptian BBQ brings the bustling street food culture of Cairo to your table.
+                    </p>
+<p class="text-accent-brown dark:text-gray-300 text-lg leading-relaxed mb-8">
+                        We believe authentic flavor starts with the fire. That's why every skewer of Kabab and Kofta is grilled over natural wood charcoal, marinated with our signature 12-spice blend imported directly from the spice markets of Khan el-Khalili.
+                    </p>
+<div class="flex gap-8 border-t border-gray-100 dark:border-gray-800 pt-8">
+<div>
+<span class="block text-3xl font-black text-deep-brown dark:text-white mb-1">35+</span>
+<span class="text-sm text-accent-brown dark:text-gray-400">Years Experience</span>
+</div>
+<div>
+<span class="block text-3xl font-black text-deep-brown dark:text-white mb-1">12</span>
+<span class="text-sm text-accent-brown dark:text-gray-400">Secret Spices</span>
+</div>
+<div>
+<span class="block text-3xl font-black text-deep-brown dark:text-white mb-1">100%</span>
+<span class="text-sm text-accent-brown dark:text-gray-400">Halal Certified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-16 bg-background-light dark:bg-background-dark border-y border-[#e5e5e0] dark:border-white/5">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-6">format_quote</span>
+<h3 class="text-2xl md:text-3xl font-bold text-deep-brown dark:text-white mb-8">
+                    "The Kofta is exactly how I remember it from my childhood in Alexandria. Smoky, juicy, and perfectly spiced. A hidden gem."
+                </h3>
+<div class="flex flex-col items-center gap-2">
+<div class="size-12 rounded-full bg-cover bg-center" data-alt="Portrait of a smiling customer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABQTPZHUMkiQjuIZhxoEcTpgmvr6VeNo0nJ5idlk3nbq3HtpWC6EEq-rrK3-YtvqQySISHq3qW8JL65QS0LBmRQ7hostfMjRtchNdw6sO4gHUj0fqfho9hJQcwg7kHLlG3W0qzi2qIYASc0sDpV48zNzXSWHQG78zRZZPnqpkWFnWOgd6Ccsxll6eFevfl-0KeHHH-61aUzCKEt7c46ua-zmvFOQPVCeFrNS67EMgLzfvd-FnLDegZx_OibBRzeEjz47hO3Gp5zNw");'></div>
+<p class="font-bold text-deep-brown dark:text-white">Ahmed Hassan</p>
+<div class="flex text-primary text-sm">
+<span class="material-symbols-outlined fill-current text-[18px]">star</span>
+<span class="material-symbols-outlined fill-current text-[18px]">star</span>
+<span class="material-symbols-outlined fill-current text-[18px]">star</span>
+<span class="material-symbols-outlined fill-current text-[18px]">star</span>
+<span class="material-symbols-outlined fill-current text-[18px]">star</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-brown text-white pt-16 pb-8">
+<div class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-40">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">kebab_dining</span>
+<span class="text-xl font-bold">Egyptian BBQ</span>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+                            Bringing the authentic taste of Egyptian street food to your neighborhood. Charcoal grilled, spice infused, made with love.
+                        </p>
+<div class="flex gap-4 mt-2">
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-deep-brown transition-colors" href="#">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-deep-brown transition-colors" href="#">
+<svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465C9.673 2.013 10.03 2 12.315 2zm-3.196 8.45c-.783 0-1.415.632-1.415 1.415 0 .783.632 1.415 1.415 1.415.783 0 1.415-.632 1.415-1.415 0-.783-.632-1.415-1.415-1.415zm7.644-2.756c0-.523-.424-.947-.947-.947-.523 0-.947.424-.947.947 0 .523.424.947.947.947.523 0 .947-.424.947-.947z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-bold uppercase tracking-wider text-sm">Explore</h4>
+<div class="flex flex-col gap-2">
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="menu.html">Menu</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="reservation.html">Reservations</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Catering</a>
+<a class="text-gray-400 hover:text-primary text-sm transition-colors" href="#">Gift Cards</a>
+</div>
+</div>
+<!-- Contact -->
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-bold uppercase tracking-wider text-sm">Visit Us</h4>
+<div class="flex flex-col gap-2 text-sm text-gray-400">
+<p>123 Nile Avenue<br/>Downtown, Cairo Block</p>
+<p class="mt-2"><span class="text-white">Phone:</span> (555) 123-4567</p>
+<p><span class="text-white">Email:</span> hello@egyptianbbq.com</p>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex flex-col gap-4">
+<h4 class="text-primary font-bold uppercase tracking-wider text-sm">Opening Hours</h4>
+<div class="flex flex-col gap-2 text-sm text-gray-400">
+<div class="flex justify-between">
+<span>Mon - Thu</span>
+<span class="text-white">11 AM - 10 PM</span>
+</div>
+<div class="flex justify-between">
+<span>Fri - Sat</span>
+<span class="text-white">11 AM - 11 PM</span>
+</div>
+<div class="flex justify-between">
+<span>Sunday</span>
+<span class="text-white">12 PM - 10 PM</span>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+<p>© 2023 Egyptian BBQ. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="assets/js/main.js"></script>
+</body></html>
