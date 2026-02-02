@@ -3,7 +3,7 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Egyptian BBQ Reservation</title>
+<title>Abu Khaled Reservation</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -66,16 +66,25 @@
 <div class="size-8 text-primary">
 <span class="material-symbols-outlined text-3xl">restaurant_menu</span>
 </div>
-<h2 class="text-[#181711] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Nile Ember BBQ</h2>
+<h2 class="text-[#181711] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Abu Khaled</h2>
 </div>
 <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
 <div class="flex items-center gap-9">
-<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="menu.html">Menu</a>
-<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html#story">Our Story</a>
-<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Location</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="menu.html" data-i18n="nav_menu">Menu</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html#story" data-i18n="nav_story">Our Story</a>
+<a class="text-primary text-sm font-bold border-b-2 border-primary" href="reservation.html" data-i18n="nav_reservations">Reservations</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="contact.html" data-i18n="nav_contact">Contact</a>
+</div>
+<div class="flex items-center gap-2">
+    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#181711] dark:text-white transition-colors" title="Toggle Theme">
+        <span class="material-symbols-outlined theme-icon">dark_mode</span>
+    </button>
+    <button id="lang-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 text-[#181711] dark:text-white font-bold transition-colors text-sm" title="Switch Language">
+        عربي
+    </button>
 </div>
 <button onclick="document.querySelector('form').scrollIntoView({behavior: 'smooth'})" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-[#181711] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-md">
-<span class="truncate">Book Now</span>
+<span class="truncate" data-i18n="book_now">Book Now</span>
 </button>
 </div>
 <!-- Mobile Menu Icon -->
@@ -87,14 +96,15 @@
 <!-- Mobile Menu Drawer -->
 <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-[#2c1f18] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 shadow-xl text-white">
     <div class="flex justify-between items-center mb-8">
-        <h2 class="text-xl font-bold text-black dark:text-white">Nile Ember BBQ</h2>
+        <h2 class="text-xl font-bold text-black dark:text-white">Abu Khaled</h2>
         <span id="close-menu-btn" class="material-symbols-outlined text-3xl cursor-pointer text-black dark:text-white">close</span>
     </div>
     <nav class="flex flex-col gap-6 text-xl font-bold text-center">
         <a href="index.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Home</a>
         <a href="menu.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Menu</a>
         <a href="index.html#story" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Our Story</a>
-        <a href="#" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Location</a>
+        <a href="reservation.html" class="text-primary hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Reservations</a>
+        <a href="contact.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Contact</a>
     </nav>
 </div>
 
@@ -107,10 +117,10 @@
 <div class="mb-8">
 <div class="flex items-center gap-2 mb-2 text-primary">
 <span class="material-symbols-outlined text-sm">event_seat</span>
-<span class="text-xs font-bold uppercase tracking-widest">Reservations</span>
+<span class="text-xs font-bold uppercase tracking-widest" data-i18n="nav_reservations">Reservations</span>
 </div>
-<h1 class="text-[#181711] dark:text-white tracking-tight text-3xl lg:text-4xl font-bold leading-tight mb-3">Reserve Your Table</h1>
-<p class="text-gray-600 dark:text-[#9f896f] text-base font-normal leading-relaxed">
+<h1 class="text-[#181711] dark:text-white tracking-tight text-3xl lg:text-4xl font-bold leading-tight mb-3" data-i18n="reserve_table_title">Reserve Your Table</h1>
+<p class="text-gray-600 dark:text-[#9f896f] text-base font-normal leading-relaxed" data-i18n="reservation_desc">
                             Experience authentic Egyptian flavors in a warm, rustic atmosphere. Please fill out the form below to secure your spot.
                         </p>
 </div>
@@ -120,13 +130,13 @@
 <div class="flex flex-col sm:flex-row gap-4">
 <label class="flex flex-col flex-1">
 <span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2 flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-accent-sand">calendar_today</span> Date
+<span class="material-symbols-outlined text-[18px] text-accent-sand">calendar_today</span> <span data-i18n="date_label">Date</span>
                                 </span>
 <input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Select Date" type="date"/>
 </label>
 <label class="flex flex-col flex-1">
 <span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2 flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-accent-sand">schedule</span> Time
+<span class="material-symbols-outlined text-[18px] text-accent-sand">schedule</span> <span data-i18n="time_label">Time</span>
                                 </span>
 <input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Select Time" type="time"/>
 </label>
@@ -134,7 +144,7 @@
 <!-- Guests Selector -->
 <div class="flex flex-col">
 <span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-3 flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px] text-accent-sand">group</span> Number of Guests
+<span class="material-symbols-outlined text-[18px] text-accent-sand">group</span> <span data-i18n="guests_label">Number of Guests</span>
                             </span>
 <div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide guest-selector">
 <button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">2</button>
@@ -148,21 +158,21 @@
 <!-- Personal Details -->
 <div class="space-y-4 pt-2">
 <label class="flex flex-col">
-<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Full Name</span>
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="full_name">Full Name</span>
 <input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="Enter your full name" type="text"/>
 </label>
 <label class="flex flex-col">
-<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Phone Number</span>
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="phone_number">Phone Number</span>
 <input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="+20 123 456 7890" type="tel"/>
 </label>
 <label class="flex flex-col">
-<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Special Requests (Optional)</span>
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2" data-i18n="special_requests">Special Requests (Optional)</span>
 <textarea class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-24 p-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm resize-none placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="Allergies, seating preference, special occasion..."></textarea>
 </label>
 </div>
 <!-- Submit Button -->
 <button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary text-[#181711] text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-primary/25 mt-2">
-                            Book a Table
+<span data-i18n="book_table_submit">Book a Table</span>
                         </button>
 <p class="text-center text-xs text-gray-500 dark:text-[#9f896f]">
                             By booking, you agree to our Terms of Service.
@@ -182,7 +192,7 @@
 <div class="absolute inset-0 bg-gradient-to-t from-[#2c1f18] via-transparent to-[#2c1f18]/50"></div>
 </div>
 <!-- Floating Info Card / Gallery Preview -->
-<div class="absolute bottom-16 left-16 right-16 z-20">
+<div class="absolute bottom-16 start-16 end-16 z-20">
 <div class="backdrop-blur-md bg-[#2c1f18]/80 border border-[#5d5048] p-6 rounded-xl shadow-2xl">
 <div class="flex items-start justify-between mb-4">
 <div>
@@ -222,7 +232,7 @@
 </div>
 <div class="absolute inset-0 bg-[#2c1f18]/70 flex items-center justify-center text-center p-6">
 <div>
-<h3 class="text-white text-lg font-bold">Nile Ember BBQ</h3>
+<h3 class="text-white text-lg font-bold">Abu Khaled</h3>
 <p class="text-[#9f896f] text-sm mt-1">123 Nile Corniche, Cairo</p>
 </div>
 </div>
