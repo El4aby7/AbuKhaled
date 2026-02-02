@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Egyptian BBQ Reservation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f5dd70",
+                        "background-light": "#f8f8f6",
+                        "background-dark": "#2c1f18", // Customized to match user request: #2c1f18
+                        "background-secondary": "#5d5048", // User requested #5d5048
+                        "accent-sand": "#9f896f", // User requested #9f896f
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<style>
+        /* Custom scrollbar for a cleaner look in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2c1f18;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5d5048;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9f896f;
+        }
+
+        /* Custom styling for inputs to remove default date picker icons in some browsers for custom feel */
+        input[type="date"]::-webkit-calendar-picker-indicator,
+        input[type="time"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#181711] dark:text-white transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f4f0] dark:border-[#5d5048] px-6 lg:px-10 py-4 bg-white dark:bg-[#2c1f18] z-20 sticky top-0">
+<div class="flex items-center gap-4 cursor-pointer" onclick="window.location.href='index.html'">
+<div class="size-8 text-primary">
+<span class="material-symbols-outlined text-3xl">restaurant_menu</span>
+</div>
+<h2 class="text-[#181711] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Nile Ember BBQ</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="menu.html">Menu</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="index.html#story">Our Story</a>
+<a class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Location</a>
+</div>
+<button onclick="document.querySelector('form').scrollIntoView({behavior: 'smooth'})" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-[#181711] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-md">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden text-[#181711] dark:text-white">
+<span id="open-menu-btn" class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+</header>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[60] bg-white dark:bg-[#2c1f18] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col p-6 shadow-xl text-white">
+    <div class="flex justify-between items-center mb-8">
+        <h2 class="text-xl font-bold text-black dark:text-white">Nile Ember BBQ</h2>
+        <span id="close-menu-btn" class="material-symbols-outlined text-3xl cursor-pointer text-black dark:text-white">close</span>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-bold text-center">
+        <a href="index.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Home</a>
+        <a href="menu.html" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Menu</a>
+        <a href="index.html#story" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Our Story</a>
+        <a href="#" class="text-black dark:text-white hover:text-primary py-2 border-b border-gray-200 dark:border-gray-700">Location</a>
+    </nav>
+</div>
+
+<!-- Main Content Layout -->
+<main class="flex-grow flex flex-col lg:flex-row h-full">
+<!-- Left Side: Booking Form -->
+<div class="w-full lg:w-1/2 xl:w-[45%] flex flex-col justify-center px-6 py-10 lg:p-16 bg-white dark:bg-[#2c1f18] relative z-10">
+<div class="max-w-lg mx-auto w-full">
+<!-- Headline -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined text-sm">event_seat</span>
+<span class="text-xs font-bold uppercase tracking-widest">Reservations</span>
+</div>
+<h1 class="text-[#181711] dark:text-white tracking-tight text-3xl lg:text-4xl font-bold leading-tight mb-3">Reserve Your Table</h1>
+<p class="text-gray-600 dark:text-[#9f896f] text-base font-normal leading-relaxed">
+                            Experience authentic Egyptian flavors in a warm, rustic atmosphere. Please fill out the form below to secure your spot.
+                        </p>
+</div>
+<!-- Form -->
+<form id="reservation-form" class="flex flex-col gap-6">
+<!-- Date & Time Row -->
+<div class="flex flex-col sm:flex-row gap-4">
+<label class="flex flex-col flex-1">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-sand">calendar_today</span> Date
+                                </span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Select Date" type="date"/>
+</label>
+<label class="flex flex-col flex-1">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-sand">schedule</span> Time
+                                </span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm" placeholder="Select Time" type="time"/>
+</label>
+</div>
+<!-- Guests Selector -->
+<div class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-accent-sand">group</span> Number of Guests
+                            </span>
+<div class="flex gap-2 overflow-x-auto pb-2 scrollbar-hide guest-selector">
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">2</button>
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-primary border-primary text-black font-bold text-lg flex items-center justify-center shadow-lg shadow-primary/20" type="button">3</button>
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">4</button>
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">5</button>
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">6</button>
+<button class="guest-btn flex-shrink-0 w-12 h-12 rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white hover:bg-primary hover:border-primary hover:text-black focus:bg-primary focus:border-primary focus:text-black transition-all font-medium text-lg flex items-center justify-center" type="button">8+</button>
+</div>
+</div>
+<!-- Personal Details -->
+<div class="space-y-4 pt-2">
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Full Name</span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="Enter your full name" type="text"/>
+</label>
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Phone Number</span>
+<input required class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-12 px-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="+20 123 456 7890" type="tel"/>
+</label>
+<label class="flex flex-col">
+<span class="text-[#181711] dark:text-[#dcdcdc] text-sm font-medium leading-normal pb-2">Special Requests (Optional)</span>
+<textarea class="form-input flex w-full rounded-lg border border-[#e6e4db] dark:border-[#5d5048] bg-white dark:bg-[#221f10] text-[#181711] dark:text-white h-24 p-4 focus:outline-0 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-sm resize-none placeholder:text-gray-400 dark:placeholder:text-[#5d5048]" placeholder="Allergies, seating preference, special occasion..."></textarea>
+</label>
+</div>
+<!-- Submit Button -->
+<button class="w-full flex cursor-pointer items-center justify-center rounded-lg h-12 px-4 bg-primary text-[#181711] text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 hover:scale-[1.01] active:scale-[0.99] transition-all shadow-lg shadow-primary/25 mt-2">
+                            Book a Table
+                        </button>
+<p class="text-center text-xs text-gray-500 dark:text-[#9f896f]">
+                            By booking, you agree to our Terms of Service.
+                        </p>
+</form>
+</div>
+</div>
+<!-- Right Side: Atmospheric Gallery/Visuals -->
+<div class="hidden lg:block lg:w-1/2 xl:w-[55%] relative overflow-hidden bg-[#221f10]">
+<!-- Background pattern overlay -->
+<div class="absolute inset-0 bg-[#2c1f18]/40 z-10 pointer-events-none"></div>
+<!-- Main Image -->
+<div class="absolute inset-0 h-full w-full">
+<div class="h-full w-full bg-cover bg-center object-cover opacity-60" data-alt="Dark moody restaurant interior with warm hanging lanterns and wooden tables" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjdxH_H03sRVXThZH6nYYEvecibpQeHyou3fsYLLjPLOxUTA8wHNKLKwfbWFFiu_aJkZ0bO0LDolDMdvTPJq1aiuNOw3cnUyJObxYrvH04RbmQMFQxc9YuG_HGZ7kqdwy8RSZJuSRVV1jXrBJi5nWI3_NLqwyBUj3kER0bRjfDdoii_KVPFaKNTA0BeH3PGW4kW3EYfaSAGCVJcYmTBqxzih9QlEZljZoyLT2mmAEny2LnbgTkAr0rDRo_p3fdY5v_H0Z0-lUEBkU');">
+</div>
+<!-- Gradient overlay for text readability if needed -->
+<div class="absolute inset-0 bg-gradient-to-t from-[#2c1f18] via-transparent to-[#2c1f18]/50"></div>
+</div>
+<!-- Floating Info Card / Gallery Preview -->
+<div class="absolute bottom-16 left-16 right-16 z-20">
+<div class="backdrop-blur-md bg-[#2c1f18]/80 border border-[#5d5048] p-6 rounded-xl shadow-2xl">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="text-white text-xl font-bold mb-1">Authentic Atmosphere</h3>
+<p class="text-[#9f896f] text-sm">Experience the rustic charm of old Cairo.</p>
+</div>
+<div class="flex gap-1 text-primary">
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+<span class="material-symbols-outlined text-sm fill-current">star</span>
+</div>
+</div>
+<!-- Mini Gallery Grid -->
+<div class="grid grid-cols-3 gap-3">
+<div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Traditional Egyptian grilled meats on a platter" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDHbTFboxeNK5TvGamKFyuIiCJNYhsEzyMsKKRzPq3NvfmxNOGmbJzfZmLVk1qeUfX7tgJsyJ9COb8usveUifQPJL3w73PwlxTZif39EjU7u07FvYsUIHPPeJN6UJApK95oBtqNoraDze_vtg8865aCITX8uU6bKOqDR32LxG_ELeEheU1pQ_sYtILuAve0Ute-KrZOtQoCv_3Cfz85D9knvoh86ODWQr6sjlss41vMJDkJbhytVzGereseNwzi9hTctWad1eu3t2I');"></div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Ornate metal lantern glowing warmly in dark setting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBt8d7ugMgkzQbsc5QFUR5vPo8ARfGVkQo-gMOK4bwtyOEM3OGRJfy-Fb1XyyvbKkyRqHp5iNqE2i5ctPrxSkHNEPFGUQi6LL8AcNWZHxSct1KJVRAonXWt6Aoo7NV1qq2Pb2Hg3Dw8ENeNTVNabMoQv5PkLcA6TORn8T6xefQPYzmAZQn-ui20asKqkoQNoEq-g1mSggD0EqZoPeWknaPNKirOgWaCyUwLa-wJ3oKcEYFcNiQOAli4qCaUZNVUeSHAgGCQegQp7P0');"></div>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden relative group cursor-pointer">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Close up of spices and traditional clay pots" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSgjuuYoWoGRhwAsaChH9y7TLr_pVrYgAMs_a9mf2lN6-tK0eWP-jzJOPuTLHV1G40Fl6CW-yiZkXHdrg0vHPD_Onk0L3KO4VxwrEIssxqxMvuqBuftHLyZ88EUqZ1RJptBux68GMUtOZzId3NygaZklzTLJ602STG4J_vSeQmvxzFV-FjWgGMRUplcHXhi1YLuIS4cfZ_4FxFoiQ1w95r7flZo5xhNdrg6ch8CPJDyepdXtKeZXcuDVAFL3RnA9HC-c73RKWSATQ');"></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center group-hover:bg-black/20 transition-colors">
+<span class="text-white text-xs font-bold tracking-wider uppercase border border-white/30 px-2 py-1 rounded backdrop-blur-sm">View Gallery</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Visual (Only visible on small screens) -->
+<div class="lg:hidden h-48 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Warm restaurant ambience mobile footer" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAwmZ8IR_NyCYrEbRkkUJ8S41ua1V6stiR2_VHA83DsAQFp5By6fpvDz0ndRx45vo22jiJACGQkpjAVdQu22Pv4mRVpcKThjnoosT3OQnZD2HTJxh9zNTNRODUF5wvJ6bRh5qZJstSamVYTFl_E7SnV6hRyfQqKCsa93ZMcn13BrnHr4eGvhitpaAFH91kXlcCUw5BolJUNgXd9090fru_xmXk-783q_PokAEtj18cJZ7whcE3XCpigjhPrcm1OQ0cpqbXN0wXixE');">
+</div>
+<div class="absolute inset-0 bg-[#2c1f18]/70 flex items-center justify-center text-center p-6">
+<div>
+<h3 class="text-white text-lg font-bold">Nile Ember BBQ</h3>
+<p class="text-[#9f896f] text-sm mt-1">123 Nile Corniche, Cairo</p>
+</div>
+</div>
+</div>
+</div>
+<script src="assets/js/main.js"></script>
+</body></html>
