@@ -79,7 +79,21 @@ const translations = {
         mixed_grill_desc: "A hearty selection of shish tawook, kofta, and lamb chops served with saffron rice and tahini.",
         shish_tawook_desc: "Marinated chicken skewers grilled to perfection, seasoned with garlic, yogurt, and Egyptian spices.",
         kofta_kebab_desc: "Minced beef and lamb spiced with parsley, onions, and our secret spice blend, grilled on skewers.",
-        koshary_desc: "Egypt's national dish. A mix of rice, lentils, and pasta topped with spicy tomato sauce and garlic vinegar."
+        koshary_desc: "Egypt's national dish. A mix of rice, lentils, and pasta topped with spicy tomato sauce and garlic vinegar.",
+        story_p1: "Founded on family recipes passed down through three generations, Abu Khaled brings the bustling street food culture of Cairo to your table.",
+        story_p2: "We believe authentic flavor starts with the fire. That's why every skewer of Kabab and Kofta is grilled over natural wood charcoal, marinated with our signature 12-spice blend imported directly from the spice markets of Khan el-Khalili.",
+        years_exp: "Years Experience",
+        secret_spices: "Secret Spices",
+        halal_cert: "Halal Certified",
+        review_text: "\"The Kofta is exactly how I remember it from my childhood in Alexandria. Smoky, juicy, and perfectly spiced. A hidden gem.\"",
+        review_author: "Ahmed Hassan",
+        chefs_special: "Chef's Special Mixed Grill",
+        food_quote: "\"Food is the ingredient that binds us together.\"",
+        authentic_atmos: "Authentic Atmosphere",
+        rustic_charm: "Experience the rustic charm of old Cairo.",
+        view_gallery: "View Gallery",
+        add_to_order: "Add to Order",
+        add: "Add"
     },
     ar: {
         nav_home: "الرئيسية",
@@ -160,7 +174,21 @@ const translations = {
         mixed_grill_desc: "تشكيلة غنية من الشيش طاووق والكفتة وريش الضأن تقدم مع أرز بالزعفران وطحينة.",
         shish_tawook_desc: "أسياخ دجاج متبلة ومشوية ببراعة، متبلة بالثوم والزبادي والبهارات المصرية.",
         kofta_kebab_desc: "لحم بقري وضأن مفروم متبل بالبقدونس والبصل وخلطة بهاراتنا السرية، مشوي على الأسياخ.",
-        koshary_desc: "طبق مصر الوطني. مزيج من الأرز والعدس والمكرونة مغطى بصلصة الطماطم الحارة والخل بالثوم."
+        koshary_desc: "طبق مصر الوطني. مزيج من الأرز والعدس والمكرونة مغطى بصلصة الطماطم الحارة والخل بالثوم.",
+        story_p1: "تأسس مطعم أبو خالد بناءً على وصفات عائلية متوارثة عبر ثلاثة أجيال، ليجلب ثقافة طعام الشارع الصاخبة في القاهرة إلى طاولتك.",
+        story_p2: "نؤمن بأن النكهة الأصيلة تبدأ من النار. ولهذا السبب، يتم شواء كل سيخ من الكباب والكفتة على الفحم الطبيعي، ومتبل بخلطة البهارات الـ ١٢ الخاصة بنا والمستوردة مباشرة من أسواق التوابل في خان الخليلي.",
+        years_exp: "سنوات من الخبرة",
+        secret_spices: "توابل سرية",
+        halal_cert: "حلال ١٠٠٪",
+        review_text: "\"الكفتة طعمها زي ما بفتكره من طفولتي في إسكندرية بالظبط. مدخنة، طرية، ومتبلة صح. جوهرة مخفية.\"",
+        review_author: "أحمد حسن",
+        chefs_special: "مشويات الشيف الخاصة",
+        food_quote: "\"الطعام هو المكون الذي يجمعنا معاً.\"",
+        authentic_atmos: "أجواء أصيلة",
+        rustic_charm: "جرب السحر الريفي للقاهرة القديمة.",
+        view_gallery: "شاهد المعرض",
+        add_to_order: "أضف للطلب",
+        add: "أضف"
     }
 };
 
